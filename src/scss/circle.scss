@@ -15,12 +15,13 @@
         position: absolute;
 
         &:nth-child(1) {
-
+            z-index: 10
         }
     
         &:nth-child(2) {
             top: 50px;
             left: 300px;
+            z-index: 0
         }
     }
 }
@@ -41,14 +42,6 @@
         height: 300px;
         top: 100px;
         left: 10px;
-    }
-
-    &:nth-child(1) {
-        z-index: 10
-    }
-
-    &:nth-child(2) {
-        z-index: 0
     }
 
     &:nth-child(2) > .circle-container.-color {
