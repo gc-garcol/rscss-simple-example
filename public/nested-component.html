@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garcol</title>
+
+    <link rel="stylesheet" href="css/nested-component.css">
+</head>
+<body>
+
+    <h1>Instead up:</h1>
+    <xmp>
+        <div class='search-form'>
+            <input class='input' type='text'>
+            <button class='search-button -red -large'></button>
+        </div>
+    </xmp>
+
+    <h1>Using this:</h1>
+    <xmp>
+        <div class='search-form'>
+            <input class='input' type='text'>
+            <button class='submit'></button>
+        </div>
+
+        <style>
+            .search-form {
+                > .submit {
+                    @extend .search-button;
+                    @extend .search-button.-red;
+                    @extend .search-button.-large;
+                }
+            }
+        </style>
+    </xmp>
+
+    <h1>Result:</h1>
+    <div class='search-form'>
+        <input class='input' type='text'>
+        <button class='submit'></button>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+.search-form {
+
+    >.submit {
+        @extend .search-button;
+        @extend .search-button.-red;
+        @extend .search-button.-large;
+
+        font-size: 20px;
+        width: 50px;
+        height: 20px;
+        transform: translateY(3px);
+    }
+}
+
+.search-button {
+    &.-red {
+        background-color: red;
+    }
+
+    &.-large {
+        font-size: 20px;
+    }
+}
