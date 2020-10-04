@@ -4,10 +4,16 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const del = require('del');
 const run = require('gulp-run-command').default;
+var autoprefixer = require('gulp-autoprefixer')
+var minCss = require('gulp-minify-css')
+var rename = require('gulp-rename')
 
 gulp.task('build-css', () => {
     return gulp.src('src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError)) 
+        .pipe(autoprefixer())
+        .pipe(minCss())
+        .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest('public/css'))
 });
 
