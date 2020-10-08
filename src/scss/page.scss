@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 0.1vw;
+}
+
+.container {
+    padding: 0 100rem;
+}
+
+.button {
+    font-size: 16rem;
+    width: fit-content;
+    height: 30rem;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20rem;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &.-white {
+        background-color: #ffffff;
+        border: 1px solid grey;
+    }
+
+    &:hover {
+        background-color: pink;
+    }
+}
+
+.header-container {
+    background-color: white;
+    @extend .container;
+    height: 100rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &>.header--logo {
+        height: 100%;
+        overflow: hidden;
+
+        &>.logo {
+            height: 100%;
+        }
+    }
+
+    &>.header--btn {
+        display: flex;
+        flex-direction: row;
+
+        &>.button {
+            margin-right: 10px;
+        }
+    }
+}
+
+.menu-area {
+
+    height: 72rem;
+    position: relative;
+    background-color: gray;
+    display: flex;
+
+    &>.menu-container {
+        @extend .container;
+    }
+
+    &>.menu-container {
+        display: flex;
+        position: relative;
+
+        .menu--button-container {
+            margin: 0 10rem 0 0;
+            position: relative;
+        }
+
+        .menu--button {
+            @extend .button;
+            @extend .button.-white;
+
+            :hover {
+                background-color: rebeccapurple;
+            }          
+        }
+
+        .menu--border-button-bottom {
+            width: 100%;
+            height: 4rem;
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+
+            &.-active {
+                background-color: green;
+            }
+        }
+    }
+
+    &>.menu--border-bottom {
+        height: 4rem;
+        background-color: red;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.js-menu--border-button-bottom-active {
+    background-color: green;
+}
