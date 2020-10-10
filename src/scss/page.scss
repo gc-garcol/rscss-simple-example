@@ -6,6 +6,11 @@
 
 html {
     font-size: 0.1vw;
+    // font-size: 1px;
+}
+
+body {
+    min-width: 1000rem;
 }
 
 .container {
@@ -16,6 +21,7 @@ html {
     font-size: 16rem;
     width: fit-content;
     height: 30rem;
+    width: fit-content;
     background-color: grey;
     display: flex;
     justify-content: center;
@@ -30,6 +36,10 @@ html {
     }
 
     &:hover {
+        background-color: pink;
+    }
+
+    &:hover ~ .menu--border-button-bottom {
         background-color: pink;
     }
 }
